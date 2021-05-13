@@ -1,6 +1,9 @@
 # BlackHammerTestTask
 Test for junior position in BlackHummer 
 
+[![Watch te video](https://github.com/levord-22/BlackHammerTestTask/blob/main/How_it_works.gif)](https://github.com/levord-22/BlackHammerTestTask/blob/main/How_it_works.gif)
+
+
 #### 3141 год.
 
 Вселенная исследована и поделена. 
