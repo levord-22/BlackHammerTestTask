@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text=${title}></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class = "container mt-5 mb-5">
+    <h1>Modify Tables</h1>
+    <h4>Добавление Повелителя планет в таблицу Lords</h4>
+    <form action="/modifytable" method="post">
+        <input type="text" name="lord_name" placeholder="Введите имя Повелителя планет" class="form-control"><br>
+        <input type="number" name="age" placeholder="Введите возраст Повелителя планет" class="form-control"><br>
+        <button type="submit" class="btn btn-success" name="addLord">Добвить Повелителя</button><br>
+    </form>
+    <br>
+    <h4>Добавление Планеты в таблицу Planets</h4>
+    <form action="/modifytable" method="post">
+        <input type="text" name="planet_name" placeholder="Введите имя Планеты" class="form-control"><br>
+        <button type="submit" class="btn btn-success" name="addPlanet">Добвить Планету</button><br>
+    </form>
+
+    <br>
+    <h4>Назначить Повелителя управлять Планетой</h4>
+    <form action="/modifytable" method="post">
+        <input type="number" name="lord_id" placeholder="Назначить Повелителя c ID" class="form-control"><br>
+        <input type="number" name="id" placeholder="управлять Планетой c ID" class="form-control"><br>
+        <button type="submit" class="btn btn-success" name="setLordToPlanet">Назначить Повелителя</button><br>
+    </form>
+
+    <br>
+    <h4>Уничтожить Планету в таблице Planets</h4>
+    <form action="/modifytable" method="post">
+        <input type="number" name="id" placeholder="Введите ID Планеты" class="form-control"><br>
+        <button type="submit" class="btn btn-success" name="delPlanet">Уничтожить Планету</button><br>
+    </form>
+
+    <br>
+    <h4>Вывести ТОП-10 самых молодых Правителей</h4>
+    <form action="/modifytable" method="get">
+        <button type="submit" class="btn btn-success" name="top10">Вывести топ-10</button><br>
+    </form>
+    <br>
+    <h4>Вывести всех Правителей без планет(бездельники)</h4>
+    <form action="/modifytable" method="get">
+        <button type="submit" class="btn btn-success" name="lordsWithoutPlanets">Вывести бездельников</button><br>
+    </form>
+</div>
+
+<div th:insert="blocks/footer :: footer"></div>
+
+</body>
+</html>

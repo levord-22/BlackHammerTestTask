@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text=${title}></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<!--<nav th:insert="blocks/navigate :: navigate"></nav>-->
+
+<div class="container mt-5">
+        <h1>Таблица ТОР-10 самхы молодых Повелителей</h1>
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Lord Name</th>
+                        <th>Lord Age</th>
+                    </tr>
+                    </thead>
+                    <div th:each="el : ${lords}">
+                        <tr>
+                            <td th:text="${el.id}"/>
+                            <td th:text="${el.lord_name}"/>
+                            <td th:text="${el.age}"/>
+                        </tr>
+                    </div>
+                </table>
+</div>
+
+<div th:insert="blocks/footer :: footer"></div>
+
+</body>
+</html>

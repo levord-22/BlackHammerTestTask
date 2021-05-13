@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text=${title}></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class = "container mt-5">
+
+    <div  class="alert alert-dismissible mt-2">
+        <h2>Описание web-интерфейса тестового</h2>
+            <text>
+                <p>
+                <hr>
+                <p><b>View Tables</b><br>
+                Отображает состояние таблиц БД.<br>
+                Таблица <b>Lord's</b> -  содержит всех повелителей.<br>
+                Таблица <b>Planet's</b> - содержит все планеты.
+
+                <hr>
+                <p><b>Modify Tables</b><br>
+                Имеет следующие пункты, согласно условиям тестового:<br>
+                <ul>
+                <li>Добавление Повелителя планет в таблицу Lords</li>
+                <li>Добавление Планеты в таблицу Planets</li>
+                <li>Назначить Повелителя управлять Планетой</li>
+                <li>Уничтожить Планету в таблице Planets</li>
+                <i>Проверка результата во вкладке "View Tables".</i><p>
+                <li>Вывести ТОП-10 самых молодых Правителей</li>
+                <li>Вывести всех Правителей без планет(бездельники)</li>
+                <i>Будет произведено перенаправление на новую страницу с отображением результатов.</i>
+                </ul>
+
+                <hr>
+                <p><b>About</b><br>
+                    Описание условий тестового: задание, базовые характеристики сущностей, поддерживаемые методы API.
+
+            </text>
+
+    </div>
+</div>
+
+
+        <div th:insert="blocks/footer :: footer"></div>
+
+</body>
+</html>
